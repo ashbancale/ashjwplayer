@@ -2,13 +2,9 @@
 @import "font-awesome/fontawesome.less";
 
 @import "bootstrap/grid.less";
-//@import "bootstrap/navbar.less";
-//@import "bootstrap/navs.less";
 @import "bootstrap/mixins.less";
 @import "bootstrap/mixins/grid.less";
 @import "variables.less";
-//@grid-column-width: 70px;
-//@grid-gutter-width: 40px;
 
 //Alignment
 
@@ -68,6 +64,7 @@ ul {
     color: @blueGray;
 
     a {
+      font-family: @font-family-sans-serif;
       color:white;
       &:hover {
         text-decoration:underline;
@@ -86,11 +83,12 @@ ul {
   height:50px;
   margin-bottom: 0;
   background-color:transparent;
-  @media (min-width:@screen-desktop){ 
-    .fixed-top;
+      .fixed-top;
     position:fixed;
+  @media (min-width:@screen-tablet){ 
+
     height: 80px;
-    background-color:transparent;
+    //background-color:transparent;
   }
 }
 
@@ -109,12 +107,12 @@ ul {
       text-align:center;
       a{
           color: #000;
+
           @media (min-width:@screen-tablet){
             text-transform:uppercase;
-            font-size: ((floor(@font-size-base * .95)));
+            font-size: .7em;
             color:#fff;
-            padding-top:35px;
-            padding-bottom:35px;
+            padding: 35px 5px;
             &:focus, &:hover{
               background-color:transparent;
               color: #fff;
@@ -123,7 +121,14 @@ ul {
               text-decoration:underline;
             }
           }
-          @media (min-width:@nav-breakpoint-font){
+          @media (min-width:940px){
+            font-size: .8em;
+            padding: 35px 10px;
+          }
+          @media (min-width:1013px) and (max-width: 1090px){
+            font-size: ((floor(@font-size-base * .95)));
+          }
+          @media (min-width:1091px){
             font-size: ((floor(@font-size-base * 1.067)));
             padding-left:10px;
             padding-right:10px;
@@ -133,13 +138,23 @@ ul {
 
     a.btn{
       .btn;
+        padding-left:5px;
+        padding-right:5px;
+        font-size:10px;
 
         @media (min-width:@screen-tablet){
-        margin-top:25px;
-        margin-bottom:25px;
-        color: #fff;
-        
+          margin-top:25px;
+          margin-bottom:25px;
+          color: #fff;
+          padding-left: 5px;
+          padding-right: 5px;
+        }    
+        @media (min-width:840px){
+          padding-left:25px;
+          padding-right:25px;
+          font-size:.8em;
         }
+
         &:hover, &:focus {
           color: #fff;
           background-color: @brightRed;
@@ -151,8 +166,8 @@ ul {
   
 
 .navbar-brand{
-  
-  @media (min-width:@screen-desktop){
+  padding-top: 7.5px;
+  @media (min-width:@screen-tablet){
     padding-top:25px;
   }
 }
@@ -276,8 +291,8 @@ header.masthead {
     background-size: cover;
 
     @media (min-width:@screen-desktop){
-      height: 100vh;
-      min-height: 650px;
+      //height: 100vh;
+      //min-height: 650px;
       padding-top: 0;
       padding-bottom: 0;      
     }
