@@ -97,6 +97,7 @@ ul {
   @media(min-width:@screen-tablet){
     background-color:transparent;
   }
+
   ul.nav{
 
     padding-top:0px;
@@ -125,11 +126,12 @@ ul {
             font-size: .8em;
             padding: 35px 10px;
           }
-          @media (min-width:1013px) and (max-width: 1090px){
-            font-size: ((floor(@font-size-base * .95)));
+          @media (min-width:1088px){
+            font-size: 16px;
+
           }
           @media (min-width:1091px){
-            font-size: ((floor(@font-size-base * 1.067)));
+            font-size: 16px;
             padding-left:10px;
             padding-right:10px;
           }          
@@ -159,9 +161,38 @@ ul {
           color: #fff;
           background-color: @brightRed;
         }      
-    }      
+    }//end a.btn      
   }
-}
+}//end ul.nav  
+
+    ul.navbar-nav{
+    li{
+      a{
+        @media (min-width:@screen-tablet){
+            font-weight:600;
+        }
+        @media (min-width:1013px){
+          font-size:16px;
+        }
+      }
+    }
+  }
+
+  ul.navbar-right{
+    li{
+      a{
+        @media (min-width:@screen-tablet){
+            font-weight:normal;
+            font-size:.8em;
+        }        
+        @media (min-width:1013px){
+          font-size:13px;
+        }
+      }
+    }
+  }
+
+
 }
   
 
