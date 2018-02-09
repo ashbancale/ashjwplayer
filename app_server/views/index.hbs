@@ -1,2 +1,55 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}} world!</p>
+<header class="masthead text-center text-white d-flex">
+    <div class="row text-center" id="solutions">
+      <div class="hp-content">
+          <h1 class="text-uppercase">
+            {{ heading }}
+          </h1>
+          <div class="subheading mx-auto">
+            <p>{{ subheading }}</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ button.link }}" style="background-color:{{ button.color }};">{{ button.label }}</a>            
+          </div>
+          <img src="/images/product-shot.png" />
+
+      </div>
+    </div>
+</header>
+
+<div id="main">   
+
+  <!--div class="row text-center" id="solutions"> 
+    <div class="hp-content">
+    <h1>{{ heading }}</h1><br>
+    <h2>{{ subheading }}</h2>
+    </div>
+  </div><!-- end #solutions -->
+
+  <div class="row text-center" id="customers">
+    <div class="hp-content">
+      {{#each columnsBlock.columns}}​<div class="col-sm-4">
+        <h4>{{ heading }}</h4>
+        <p>{{ description }}</p> 
+        <a class="btn" href="{{ button.link }}" style="background-color:{{ button.color }}">{{ button.label }}</a> 
+        <ul class="links-list">
+          <li>{{ links-list.label }}{{#each links-list.links}}
+            <li><a href="{{ link }}">{{ label }}</a></li>{{/each}}
+        </ul>
+        </div>{{/each}}
+  </div><!-- end hp-content -->
+  </div><!-- end text-center-->
+
+  <div class="row" id="pricing">
+    <div class="hp-content">
+    {{#each sideBySide}}
+        <div class="item">
+          <div class="col-sm-5 {{ layout-type }}">
+              <img src="/images/{{ image }}" />
+          </div>
+          <div class="col-sm-6 description">
+            <h4>{{ heading }}</h4>
+            <p>{{ description }}</p>
+          </div>
+        </div>
+    {{/each}}
+    </div><!-- end hp-content-->
+  </div><!-- end pricing -->
+</div><br>

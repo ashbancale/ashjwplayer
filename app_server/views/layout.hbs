@@ -2,15 +2,60 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap-theme.min.css' />
+    <!--link rel='stylesheet' href='/stylesheets/nav.css' /-->
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  
   </head>
-  <body>
+  <body id="page-top">
+
+      <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+              <img src="/images/logo.svg" height="37" alt="JWPlayer Logo"/> 
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>            
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a class="nav-link js-scroll-trigger" href="#solutions">Solutions</a></li>
+              <li><a class="nav-link js-scroll-trigger"  href="#customers">Customers</a></li>
+              <li><a class="nav-link js-scroll-trigger"  href="#pricing">Pricing</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a  class="nav-link" href="#">Company</a></li>
+              <li><a  class="nav-link" href="#">Careers</a></li>
+              <li><a  class="nav-link" href="#">Developer</a></li>
+              <li><a  class="nav-link" href="#">Support</a></li>
+              <li><a  class="nav-link" href="#">Sign-in</a></li>
+              <li><a class="btn" href="/get-started">Get Started</a></li>              
+            </ul>
+          </div>
+        </div>
+      </nav> 
     {{{body}}}
     <footer>
-
+      <div class="left">
+        &copy; 2016 - 2017 | Longtail Ad Solutions, Inc. All Rights Reserved. JW Player is a registered trademark.
+      </div>
+      <div class="right">
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/dmca">DMCA</a>
+        <a href="/ad-choices">Ad Choices</a>
+      </div>
     </footer>
     <script src='/javascripts/jquery-3.3.1.min.js'></script>
-    <script src='./node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script src='/javascripts/bootstrap/bootstrap.js'></script>
+    <script src='/javascripts/vendor/scrollreveal.min.js'></script>
+    <script src='/javascripts/creative.min.js'></script>
+    <script src='/javascripts/jquery.easing.min.js'></script>
+
+
   </body>
 </html>
